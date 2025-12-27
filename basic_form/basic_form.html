@@ -1,0 +1,56 @@
+<!-- HTML is a markup language used. It provieds the basic backbone of any webpage. -->
+<!doctype html>
+<html lang="en">
+  <!-- Head section of Html contains meta data -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Forms Demo</title>
+    <!-- This tag is used to link a external css file -->
+    <link rel="stylesheet" href="basic_form.css" />
+  </head>
+
+  <!-- Body section of Html contains the actual data of the webpage -->
+  <body>
+    <h2>Student Registration Form</h2>
+
+    <!-- HTML Form -->
+    <form action="/submit" method="post" onsubmit="return validateForm();">
+      <!-- Text input -->
+      <label>Name:</label><br />
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter name"
+        required
+      /><br /><br />
+
+      <label>Email:</label><br />
+      <input type="email" name="email" required /><br /><br />
+      <label>Password:</label><br />
+      <input type="password" name="password" minlength="6" /><br /><br />
+      <label>Age:</label><br />
+      <input type="number" name="age" min="18" max="60" /><br /><br />
+      <label>Gender:</label><br />
+      <input type="radio" name="gender" value="male" /> Male
+      <input type="radio" name="gender" value="female" /> Female<br /><br />
+      <label>Skills:</label><br />
+      <input type="checkbox" name="skill" value="java" /> Java
+      <input type="checkbox" name="skill" value="python" /> Python<br /><br />
+      <label>Department:</label><br />
+      <select name="department">
+        <option value="cse">CSE</option>
+        <option value="ece">ECE</option>
+        <option value="me">ME</option>
+      </select>
+      <br /><br />
+      <label>Address:</label><br />
+      <textarea name="address" rows="3" cols="30"></textarea><br /><br />
+      <label>Date of Birth:</label><br />
+      <input type="date" name="dob" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- HTML pages can embed JavaScript using the script tag -->
+    <script src="basic_form.js"></script>
+  </body>
+</html>
